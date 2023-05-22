@@ -47,6 +47,13 @@ while (userHP > 0) {
           const item = `${monster} trophy`;
           userInvetory.push(item);
           console.log(`You earned a ${item} from killing the ${monster}!`);
+          
+          
+          if (readlineSync.keyInYN("Press 'p' to show stats?")){
+              console.log(`${userHP} HP: `);
+              console.log(`${userName} stats: `);
+              console.log(`${item} Invetory: `);
+          }
             
         } else if (userHP <= 0) {
           console.log(`The ${monster} killed you, game over.`);
@@ -56,11 +63,3 @@ while (userHP > 0) {
     }
   }
 }
-
-
-  
-  
-// const action = readlineSync.question("Press 'p' to show stats.");
-//             console.log(`${userHP} HP:`);
-//             console.log(`${userName} stats:`);
-//             console.log(`${item} Invetory:`);
